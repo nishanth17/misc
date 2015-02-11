@@ -265,10 +265,10 @@ def mobius_sieve(n):
         elif s[i] > 0: s[i] = 1
     return s
 
-def sum_of_factors(n):
+def sum_of_divisors(n):
     return reduce(mul, map(lambda x: (x[0]**(x[1]+1) - 1) // (x[0] - 1), factorize(n)))
 
-def number_of_factors(n):
+def number_of_divisors(n):
     return reduce(mul, map(lambda x : x[1] + 1, factorize(n)))
 
 def divisor_sum_sieve(n):
